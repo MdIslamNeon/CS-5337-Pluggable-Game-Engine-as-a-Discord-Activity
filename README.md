@@ -1,6 +1,3 @@
-# Discord Activity: Getting Started Guide
+# CS-5337-Pluggable-Game-Engine-as-a-Discord-Activity
 
-This template is used in the [Building An Activity](https://discord.com/developers/docs/activities/building-an-activity) tutorial in the Discord Developer Docs.
-
-Read more about building Discord Activities with the Embedded App SDK at [https://discord.com/developers/docs/activities/overview](https://discord.com/developers/docs/activities/overview).
-
+Based on [discord/getting-started-activity](https://github.com/discord/getting-started-activity).
