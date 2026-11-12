@@ -3,7 +3,7 @@
 ## Images in this folder
 
 - `secret-hitler-cover.png` — Discord Activity cover image (1920×1080)
-- `secret-hitler-icon.png` — Discord app icon (512×512)
+- `secret-hitler-icon.png` — Discord app icon (1024×1024)
 
 These images are adapted from the free **Secret Hitler print-and-play** edition:
 

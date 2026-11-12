@@ -34,13 +34,13 @@ def crop_div(name, w, extra=""):
             f'mix-blend-mode:multiply;{extra}"></div>')
 
 
-def shoot(html, name, w, h):
+def shoot(html, name, w, h, scale=1):
     src = os.path.join(OUT, name + ".html")
     with open(src, "w") as f:
         f.write(html)
     png = os.path.join(OUT, name + ".png")
     subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
-                    "--force-device-scale-factor=1", "--allow-file-access-from-files",
+                    f"--force-device-scale-factor={scale}", "--allow-file-access-from-files",
                     f"--window-size={w},{h}", f"--screenshot={png}", f"file://{src}"],
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True, timeout=90)
     print("wrote", png)
@@ -83,4 +83,4 @@ icon = HEAD + f"""
 </div></body></html>"""
 
 shoot(cover, "cover", 1920, 1080)
-shoot(icon, "icon", 512, 512)
+shoot(icon, "icon", 512, 512, scale=2)  # 1024x1024 output, as Discord recommends
